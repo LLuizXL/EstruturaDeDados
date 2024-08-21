@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -102,7 +103,103 @@ internal class Program
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
 
+        Console.WriteLine();
+        Console.WriteLine("=====================================");
+        Console.WriteLine();
+
+        //  TRABALHANDO COM FILA //
+
+        /* Criar uma Fila (Queue) */
+        Queue<string> filaBanco = new Queue<string>();
+
+
+        /* Adicionar elementos em uma Fila */
+
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+
+        //Imprimindo a Fila
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+
+
+        }
+        Console.WriteLine();
+
+
+        //Remover o primeiro elemento na Fila
+        filaBanco.Dequeue();
+
+
+        //Imprimindo a Fila
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+
+        }
+        Console.WriteLine();
+
+
+        /* Verificar se há um elemento existente na Fila */
+        bool found = filaBanco.Contains("Bia");
+
+        if (found == true)
+        {
+            Console.WriteLine(" A pessoa está presente na fila.");
+
+        }
+        else
+        {
+            Console.WriteLine(" A pessoa NÃO está presente na fila.");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("---------------------------------------");
+        Console.WriteLine();
+
+
+        // Trabalhando com PILHA(STACK) //
+
+        /* Criando uma Pilha */
+        Stack<string> livros = new Stack<string>();
+
+
+        /* Adicionar elementos em uma pilha */
+        livros.Push("Chhapeuzinho Vermelho");
+        livros.Push("Branca de Neve");
+        livros.Push("Princesa e o Sapo");
+
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine("---------------------------------------");
+        Console.WriteLine();
+
+
+        /* Remove o primeiro elemento da Pilha */
+        livros.Pop();
+
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine("---------------------------------------");
+        Console.WriteLine();
+
 
     }
 
+
+
 }
+
+
