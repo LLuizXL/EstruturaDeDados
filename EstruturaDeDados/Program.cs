@@ -84,6 +84,24 @@ internal class Program
 
 
 
+        /*  Criando um Dicionário de Dados */
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+
+        carros.Add(5, "Silvia S14");
+        carros.Add(10, "Honda 180SX");
+        carros.Add(2, "M3 Competition");
+
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+        Console.WriteLine("Meu dicionário de Carros: ");
+        /*  Imprimir um Dicionário de Dados  */
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} - {carro.Value}");
+        }
+
 
     }
 
