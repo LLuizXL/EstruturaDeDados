@@ -82,7 +82,7 @@ internal class Program
 
         imprimirLista(frutas);
 
-
+        /* EXEMPLO SOBRE (DICTIONARY) */
 
         /*  Criando um Dicionário de Dados */
         Dictionary<int, string> carros = new Dictionary<int, string>();
